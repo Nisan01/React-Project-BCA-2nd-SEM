@@ -58,7 +58,7 @@ function Footer() {
                   ></textarea>
                 </p>
                 <p class="submit_wrapper">
-                  <input type="submit" value="ENVOYER" />
+                  <input type="submit" value="SUBMIT" />
                 </p>
               </form>
             </article>
