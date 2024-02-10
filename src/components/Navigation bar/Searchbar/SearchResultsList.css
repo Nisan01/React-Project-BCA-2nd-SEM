@@ -1,0 +1,29 @@
+
+/* .result-list-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0px; /* Adjust this value */
+
+
+.results-list {
+  width: 351%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 8px #ddd;
+  border-radius: 10px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.result-list-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* position: relative; */
+  position: absolute;
+  z-index: 1;
+  right: 43.5%;
+  
+}

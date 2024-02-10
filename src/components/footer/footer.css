@@ -1,0 +1,308 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+.feedback-sec {
+  font-family: Open Sans, sans-serif;
+  line-height: 1.5em;
+}
+#contact {
+  width: 500px;
+  margin: 2em auto;
+  background: white;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+#contact:hover {
+}
+
+#contact::after {
+  content: "";
+  display: block;
+  height: 30px;
+  width: 90%;
+  left: 5%;
+  bottom: 0;
+  position: absolute;
+  -webkit-box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 100%;
+  z-index: -1;
+}
+#contact article {
+  padding: 1em;
+}
+#contact h1 {
+  background: #171616;
+  font-family: Oswald, sans-serif;
+  font-size: 1.75em;
+  padding: 0.6em 0 0.6em 0.4em;
+  color: #f9f9f9;
+  text-shadow: 0 0.06em 0 #424242;
+  position: relative;
+}
+.contactbutton {
+  background: #ecf4ffc7;
+  box-shadow: 1px 1px 0 0 #7272728f, 2px 2px 0 0 #0a090900,
+    3px 3px 0 0 #59595900;
+  text-align: center;
+  display: block;
+  width: 100%;
+  height: 50px;
+  margin-top: 20px;
+  margin-bottom: 2px;
+  cursor: pointer;
+}
+.contactbutton:hover {
+  box-shadow: 1px 1px 0 0 #45404142, 0px 0px 0 0 #5f5557, 0px 0px 0 0 #343233;
+  margin-top: 22px;
+  margin-left: 2px;
+  margin-bottom: 0px;
+}
+.mail {
+  margin-top: 11px;
+  font-size: 15px;
+  display: inline-block;
+  border-top: 2em solid transparent;
+  border-left: 2.6em solid #000000;
+  height: 0;
+  width: 0;
+  position: relative;
+}
+.mail:before {
+  content: "";
+  top: -2.5em;
+  left: -2.95em;
+  display: block;
+  position: absolute;
+  border-top: 1.2em solid #151515;
+  border-left: 1.6em solid transparent;
+  border-right: 1.6em solid transparent;
+  border-bottom: 1em solid transparent;
+  font-size: 0.8em;
+}
+.mail::after {
+  display: block;
+  content: "";
+  position: absolute;
+  border-top: 2em solid transparent;
+  border-right: 2.6em solid #000000;
+  height: 0;
+  width: 0;
+  left: -2.18em;
+  bottom: 0;
+}
+#checkcontact {
+  position: absolute;
+  left: -9999px;
+}
+.contactform {
+  overflow: hidden;
+  max-height: 0px;
+  -webkit-transition: all linear 1s;
+  -moz-transition: all linear 1s;
+  -o-transition: all linear 1s;
+  -ms-transition: all linear 1s;
+  transition: all linear 1s;
+}
+#checkcontact:checked + .contactform {
+  max-height: 1000px;
+}
+.input_wrapper {
+  position: relative;
+}
+.textarea_wrapper textarea {
+  margin-top: 20px;
+  display: block;
+  width: 100%;
+  background: white;
+  border: 1px solid #dadada;
+  box-shadow: 0 0 1px 0 #e4e4e4;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 1em;
+  -webkit-transition: all 250ms ease;
+  -moz-transition: all 250ms ease;
+  -ms-transition: all 250ms ease;
+  -o-transition: all 250ms ease;
+  transition: all 250ms ease;
+  color: #5e5e5e;
+}
+.input_wrapper input[type="text"] {
+  margin-top: 1em;
+  display: block;
+  width: 100%;
+  background: white;
+  border: 1px solid #dadada;
+  box-shadow: 0 0 1px 0 #e4e4e4;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 1em;
+  -webkit-transition: all 250ms ease;
+  -moz-transition: all 250ms ease;
+  -ms-transition: all 250ms ease;
+  -o-transition: all 250ms ease;
+  transition: all 250ms ease;
+  color: #5e5e5e;
+  text-indent: 15%;
+}
+.input_wrapper input[type="text"]:focus {
+  background: rgba(242, 56, 90, 0.05);
+  box-shadow: inset 2px 2px 5px 0 #dadada;
+  outline: none;
+  text-indent: 0;
+}
+.input_wrapper label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background: #080808;
+  color: white;
+  font-family: Oswald, sans-serif;
+  box-sizing: border-box;
+  width: 15%;
+  text-align: center;
+  line-height: 2.8em;
+  -webkit-transition: all 250ms ease;
+  -moz-transition: all 250ms ease;
+  -ms-transition: all 250ms ease;
+  -o-transition: all 250ms ease;
+  transition: all 250ms ease;
+}
+.input_wrapper input[type="text"]:focus + label {
+  left: 85%;
+}
+.textarea_wrapper textarea {
+  margin-top: 20px;
+  display: block;
+  width: 100%;
+  min-height: 150px;
+  background: white;
+  border: 1px solid #dadada;
+  box-shadow: 0 0 1px 0 #e4e4e4;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 1em;
+  -webkit-transition: all 250ms ease;
+  -moz-transition: all 250ms ease;
+  -ms-transition: all 250ms ease;
+  -o-transition: all 250ms ease;
+  transition: all 250ms ease;
+  color: #5e5e5e;
+}
+.textarea_wrapper textarea:focus {
+  background: rgba(242, 56, 90, 0.05);
+  box-shadow: inset 2px 2px 5px 0 #dadada;
+  outline: none;
+}
+.submit_wrapper {
+  text-align: center;
+}
+
+.submit_wrapper input {
+  text-align: center;
+  display: inline-block;
+  width: 40%;
+  height: 50px;
+  margin-top: 1em;
+  margin-bottom: 6px;
+  cursor: pointer;
+  background: #000000;
+  color: white;
+  font-family: Oswald, sans-serif;
+  font-size: 1em;
+  border: none;
+  box-shadow: 1px 1px 0 0 #e9e9e900, 2px 2px 0 0 #00000091,
+    3px 3px 0 0 #00000000;
+  -webkit-appearance: none;
+  transition: all 250ms ease;
+}
+.submit_wrapper input:hover {
+  -webkit-box-shadow: 1px 1px 0 0 #832032, 0px 0px 0 0 #832032,
+    0px 0px 0 0 #832032;
+  box-shadow: 1px 1px 0 0 #832032, 0px 0px 0 0 #832032, 0px 0px 0 0 #832032;
+  margin-top: 22px;
+  margin-left: 2px;
+  margin-bottom: 0px;
+}
+
+@media (max-width: 500px) {
+  #contact {
+    width: 100%;
+  }
+  .input_wrapper label {
+    line-height: 3.5em;
+    font-size: 0.8em;
+  }
+}
+
+.ftlast {
+  background: #000;
+  padding: 30px 0px;
+  font-family: "Play", sans-serif;
+  text-align: center;
+}
+
+.row {
+  width: 100%;
+  margin: 1% 0%;
+  padding: 0.6% 0%;
+  color: gray;
+  font-size: 0.8em;
+}
+
+.row a {
+  text-decoration: none;
+  color: gray;
+  transition: 0.5s;
+}
+
+.row a:hover {
+  color: #fff;
+}
+
+.row ul {
+  width: 100%;
+}
+
+.row ul li {
+  display: inline-block;
+  margin: 0px 30px;
+}
+
+.row a i {
+  font-size: 2em;
+  margin: 0% 1%;
+}
+
+@media (max-width: 720px) {
+  .footer {
+    text-align: left;
+    padding: 5%;
+  }
+  .row ul li {
+    display: block;
+    margin: 10px 0px;
+    text-align: left;
+  }
+  .row a i {
+    margin: 0% 3%;
+  }
+}
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.logohyt img {
+  height: 100px;
+}

@@ -1,0 +1,175 @@
+.input-wrapper {
+  width: 100%;
+  height: 2.5rem;
+  border: none;
+  border-radius: 10px;
+  padding: 0 15px;
+  box-shadow: 0px 0px 8px #ddd;
+  background-color: white;
+  display: flex;
+  align-items: center;
+}
+
+input {
+  background-color: white;
+  height: 42px;
+  width: 100%;
+  font-size: 1.11rem;
+  border-radius: 25px 0 0 25px;
+  border: 1.5px solid rgba(194, 194, 194, 0.5);
+  margin-right: 24px;
+  margin-left: -16px;
+  outline: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+#search-icon {
+  color: royalblue;
+}
+
+/* .menubar{
+  background-color: rgb(255, 0, 0);
+  width: 150px;
+  height: 100vh;
+  display: flex;
+} */
+
+.navbar11 {
+  position: fixed;
+  top: 7rem;
+  display: flex;
+  align-items: center;
+  left: 1rem;
+  background: #000000b3;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  padding: 1rem 0;
+  /* box-shadow: 0 0 40px rgba(0, 0, 0, 0.03); */
+  height: calc(108vh - 15rem);
+}
+
+.navbar__link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3.5rem; /* Assuming linkHeight is 1rem * 3.5 */
+  width: 5.5rem; /* Assuming spacer is 1rem */
+  color: #6a778e;
+  transition: 250ms ease all;
+}
+
+.navbar__link span {
+  position: absolute;
+  left: 100%;
+  transform: translateX(-4rem);
+  margin-left: 1rem;
+  opacity: 0;
+  pointer-events: none;
+  color: #406ff3;
+  background: #f6f6f6;
+  padding: 0.75rem;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  transition: 250ms ease all;
+  border-radius: 5.5px; /* Assuming borderRadius is 10px */
+}
+
+.navbar__link:hover {
+  color: #fff;
+}
+
+.navbar__link:hover span {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.navbar__item:last-child:before {
+  content: "";
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+  top: 0;
+  left: 1rem; /* Assuming spacer is 1rem */
+  width: 3.5rem; /* Assuming linkHeight is 1rem * 3.5 */
+  height: 3.5rem; /* Assuming linkHeight is 1rem * 3.5 */
+  background: #406ff3;
+  border-radius: 17.5px; /* Assuming borderRadius is 10px */
+  transition: 250ms cubic-bezier(1, 0.2, 0.1, 1.2) all;
+}
+
+.navbar__menu {
+  list-style: none;
+}
+
+/* ---------------- Navbar and burger menu ------------------ */
+.nav-toggle {
+  height: 5em;
+  /* background-color: rgb(37, 39, 53); */
+  display: flex;
+  justify-content: flex-start;
+  padding: 1em;
+  position: fixed;
+  top: 9px;
+}
+
+.burger-menu {
+  height: 100%;
+  width: 4em;
+
+  cursor: pointer;
+}
+
+.burger-bar {
+  margin: 4px;
+  width: 29px;
+  height: 3px;
+  background-color: rgb(221 221 221);
+  border-radius: 0.2em;
+}
+
+/* ------------- sliding menu ------------------ */
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: inherit;
+}
+
+/* ----- animations--------- */
+/* clicked */
+.burger-bar.clicked:nth-child(1) {
+  transform: rotate(1126deg) translate(3.75em, 1.5em);
+  transition: ease-out 0.5s;
+  box-shadow: rgb(17 174 24 / 17%) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.burger-bar.clicked:nth-child(2) {
+  transform: scale(0.1);
+  transition: ease-out 0.5s;
+}
+
+.burger-bar.clicked:nth-child(3) {
+  transform: rotate(2474deg) translate(-1em, 3em);
+  transition: ease-out 0.5s;
+  box-shadow: rgb(17 174 24 / 17%) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+/* unclicked */
+.burger-bar.unclicked {
+  transform: rotate(0) translate(0);
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+}
